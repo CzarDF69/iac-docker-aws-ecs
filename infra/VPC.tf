@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "vpc_${var.nome_ambiente}"
+  name = "vpc-${var.nome_ambiente}"
   cidr = "10.0.0.0/16"
 
   azs             = ["us-east-2a", "us-east-2b", "us-east-2c"]
@@ -12,7 +12,7 @@ module "vpc" {
   enable_vpn_gateway = false
 
   tags = {
-    Terraform = "true"
+    Project     = "Terraform"
     Environment = var.sigla_ambiente
   }
 }

@@ -1,7 +1,7 @@
 resource "aws_lb" "alb" {
   name               = "ECS-Django"
   security_groups    = [aws_security_group.alb_public.id]
-  subnets            = [module.vpc.public_subnets]
+  subnets            = module.vpc.public_subnets
 
   enable_deletion_protection = false
 
@@ -28,7 +28,7 @@ resource "aws_lb_target_group" "alvo" {
   port        = 8000
   protocol    = "HTTP"
   target_type = "ip"
-  vpc_id      = modulo.vpc.vpc_id
+  vpc_id      = module.vpc.vpc_id
 }
 
 output "IP" {

@@ -1,5 +1,5 @@
 resource "aws_iam_role" "cargo" {
-  name = "cargo_${var.sigla_ambiente}"
+  name = "${var.sigla_ambiente}-cargo"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -17,14 +17,10 @@ resource "aws_iam_role" "cargo" {
       },
     ]
   })
-
-  tags = {
-    Origem = "Terraform"
-  }
 }
 
-resource "aws_iam_role_policy" "ecs_ecr" {
-  name = "ecs_ecr"
+resource "aws_iam_role_policy" "policy" {
+  name = "${var.sigla_ambiente}-policy"
   role = aws_iam_role.cargo.id
 
   policy = jsonencode({
@@ -47,7 +43,7 @@ resource "aws_iam_role_policy" "ecs_ecr" {
 }
 
 resource "aws_iam_instance_profile" "perfil" {
-  name = "perfil_${var.sigla_ambiente}"
+  name = "${var.sigla_ambiente}-perfil"
   role = aws_iam_role.cargo.name
 }
 
