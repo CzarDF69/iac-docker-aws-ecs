@@ -24,8 +24,9 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 
-# clientes-leo-api
-clientes-leo-api*
+# API
+./clientes-leo-api/clientes/*
+./clientes-leo-api/setup/*
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
