@@ -2,8 +2,10 @@ module "prod" {
     source = "../../infra"
 
     nome_ambiente = "producao"
-    sigla_ambiente = "prd"
+    sigla_ambiente = "prod"
     versao = "v01"
+    maquina = "t2.micro"
+    maxSize = 2
 }
 
 output "IP_alb" {

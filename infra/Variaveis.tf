@@ -9,3 +9,11 @@ variable "sigla_ambiente" {
 variable "versao" {
   type = string
 }
+
+variable "maquina" {
+    type = string
+}
+
+variable "maxSize" {
+    type = number
+}
