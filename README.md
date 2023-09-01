@@ -1,7 +1,7 @@
 # Projeto Alura: iac-docker-aws-ecs
 
 ### Infraestrutura como código: Terraform, Docker e Elastic Container Service
-Quinto curso da formação *Infraestrutura como código* da **Alura**, utilizando Terraform, Docker e Elastic Container Service da AWS.
+Quinto curso da formação **Infraestrutura como código** da **Alura**, utilizando Terraform, Docker e Elastic Container Service.
 
 ## ✔️ Objetivos com este curso
 - Aprender sobre permissões e permissionamento
@@ -20,7 +20,7 @@ Quinto curso da formação *Infraestrutura como código* da **Alura**, utilizand
 
 `terraform apply`
 
-### Criar imagem docker (igual feito no curso anterior):
+### Criar imagem docker (também usados no curso anterior):
 `cd clientes-leo-api`
 
 `docker build . -t producao:v1`
