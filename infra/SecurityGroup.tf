@@ -1,5 +1,5 @@
 resource "aws_security_group" "alb_public" {
-  name        = "alb_ECS_public"
+  name        = "alb_ecs_public"
   vpc_id      = module.vpc.vpc_id
 }
 
@@ -23,7 +23,7 @@ resource "aws_security_group_rule" "tcp_alb_pub_out" {
 }
 
 resource "aws_security_group" "alb_private" {
-  name        = "alb_ECS_private"
+  name        = "alb_ecs_private"
   vpc_id      = module.vpc.vpc_id
 }
 

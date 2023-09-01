@@ -1,6 +1,7 @@
 module "prod" {
     source = "../../infra"
 
+    regiao = var.regiao
     nome_ambiente = "producao"
     sigla_ambiente = "prod"
     versao = "v01"

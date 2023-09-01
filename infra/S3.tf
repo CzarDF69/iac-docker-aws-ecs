@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "beanstalk_deploys" {
-    bucket = "vcma-deploy-${var.nome_ambiente}"
+    bucket = "bean-deploy-${var.nome_ambiente}"
 }
 
 resource "aws_s3_object" "docker" {

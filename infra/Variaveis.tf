@@ -11,9 +11,13 @@ variable "versao" {
 }
 
 variable "maquina" {
-    type = string
+  type = string
 }
 
 variable "maxSize" {
-    type = number
+  type = number
+}
+
+variable "regiao" {
+  type = string
 }
